@@ -29,4 +29,31 @@
             margin: 10px 0;
             padding: 10px;
             border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>胎教音乐播放列表</h1>
+    <ul id="music-list">
+        <li onclick="playMusic('https://share.weiyun.com/ds9xHwhw')">音乐1</li>
+        <li onclick="playMusic('https://share.weiyun.com/h98rhtW6')">音乐2</li>
+        <li onclick="playMusic('https://share.weiyun.com/pWFabhhq')">音乐3</li>
+        <!-- 继续添加其他音乐链接 -->
+    </ul>
+    <audio id="audio-player" controls></audio>
+
+    <script>
+        function playMusic(url) {
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = url;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
